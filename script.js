@@ -13,29 +13,39 @@ use local storage to save previously searched cities below the city search secti
 
 */
 
-
+const body = document.body
 var inputField = document.querySelector('#city')
-var button = document.querySelector('#get-weather')
+var button = document.querySelector('#search-btn')
 var savedCities = []
+var cityContianer = document.querySelector('.container')
 
-
-function fetchData(event){
+function fetchData(event) {
     event.preventDefault();
-    var cityName = inputField.value
-    var apiKey = 'df9350967b23dd28552df540966d900e'
-    var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + apiKey    
-    
+    var cityName = inputField.value;
+    var apiKey = "df9350967b23dd28552df540966d900e";
+    var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey;
     fetch(requestUrl)
-        .then(function(response){
-            return response.json()
+        .then(function (response) {
+            return response.json();
         })
-        .then(function(weatherData){
-            console.log(weatherData)
-            console.log(weatherData.weather)
+        .then(function (weatherData) {
+            console.log(weatherData);
+            console.log("Temp: "+ weatherData.main.temp)
+            console.log("Wind: " + weatherData.wind.speed + " MPH")
+            console.log("Humidity: " + weatherData.main.humidity)
+            console.log("UV Index:")
+            cityContianer.append(cityName);
+            cityContianer.append("Wind: " + weatherData.wind.speed + " MPH");
+            cityContianer.append("Humidity: " + weatherData.main.humidity);
+            cityContianer.append("UV Index:");
+
+        })
+
+    }
+
+button.addEventListener("click", fetchData)
+
+var currentCity = document.querySelector('#current-city-name')
 
 
-            var row = document.createElement("tr");
-            var tDataCity = document.createElement("td");
-            var tataTemp = document.createElement ("td");
-            var tDataBP = document.createElement("td");
 
