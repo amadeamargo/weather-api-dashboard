@@ -18,6 +18,18 @@ var inputField = document.querySelector('#city')
 var button = document.querySelector('#search-btn')
 var savedCities = []
 var cityContianer = document.querySelector('.container')
+var currentCityName = document.querySelector("#current-city-name")
+var currentCityContainer = document.createElement("div")
+
+currentCityName.text = inputField.value
+
+
+// var currentDay = document.querySelector("#currentDay");
+// var today = moment().format("LLLL");
+// currentDay.text(today)
+
+
+
 
 function fetchData(event) {
     event.preventDefault();
@@ -33,14 +45,15 @@ function fetchData(event) {
             console.log("Temp: "+ weatherData.main.temp)
             console.log("Wind: " + weatherData.wind.speed + " MPH")
             console.log("Humidity: " + weatherData.main.humidity)
-            console.log("UV Index:")
+            console.log(moment().format("LLLL"))
+            
             cityContianer.append(cityName);
+            cityContianer.append("Temp: "+ weatherData.main.temp)
             cityContianer.append("Wind: " + weatherData.wind.speed + " MPH");
             cityContianer.append("Humidity: " + weatherData.main.humidity);
-            cityContianer.append("UV Index:");
+            cityContianer.append(moment().format("LLLL"))
 
         })
-
     }
 
 button.addEventListener("click", fetchData)
