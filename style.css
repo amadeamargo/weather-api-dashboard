@@ -77,12 +77,10 @@
 }
 
 .card{
-    background-color: rgba(11, 11, 163, 0.575);
+    background-color: rgb(1, 39, 46);
     color: white;
-    padding: 0px 10px;
-    width:fit-content;
+    margin: 0px 10px;
+    width:25%;
     border-width: 0.5px;
     font-size: small;
-
-
 }

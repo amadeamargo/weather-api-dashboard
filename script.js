@@ -78,7 +78,7 @@ function fetchData(event) {
             
             twoDay.append(moment().add(2, 'days').format("l"))
             twoDayTemp.append("Temp: " + ((weatherData.list[2].main.temp - 273.15) * 9/5 + 32).toFixed(0) + "°")
-            twoDayWind.append("Wind: " + weatherData.list[2].wind.speed + " mph")
+            twoDayWind.append("Wind: " + weatherData.list[2].wind.speed + " MPH")
             twoDayHumidity.append("Humidity: " + weatherData.list[2].main.humidity + "%")
             //3day
             var threeDay = document.querySelector("#three-day-date")
@@ -88,7 +88,7 @@ function fetchData(event) {
            
             threeDay.append(moment().add(3, 'days').format("l"))
             threeDayTemp.append("Temp: " + ((weatherData.list[3].main.temp - 273.15) * 9/5 + 32).toFixed(0) + "°")
-            threeDayWind.append("Wind: " + weatherData.list[3].wind.speed + " mph")
+            threeDayWind.append("Wind: " + weatherData.list[3].wind.speed + " MPH")
             threeDayHumidity.append("Humidity: " + weatherData.list[3].main.humidity + "%")
             //4day
             var fourDay = document.querySelector("#four-day-date")
