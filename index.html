@@ -13,21 +13,58 @@
     <div id="banner">
         <h1>Weather Dashboard</h1>
     </div>
-    <div id="search-city">
-        <h2>Search for a City:</h2>
-        <input type="text" id="city" placeholder="City"/>
-        <button id="search-btn">Search</button>
+    <div id="search-display">
+        <section id="search-section">
+            <div id="search-city">
+                <h2>Search for a City:</h2>
+                <input type="text" id="city" placeholder="City"/>
+                <button id="search-btn">Search</button>
+            </div>
+            <div id="search-history">
+            </div>
+        </section>
+        <section id="display-section">
+            <div class="container" id="current-city">
+                <h3 id="searched-city-name"></h3>
+                <p id="currentDay"></p>
+                <p id="searched-city-temp"></p>
+                <p id="searched-city-wind"></p>
+                <p id="searched-city-humidity"></p>
+            </div>
+            <div  class="five-day" id="five-day-forecast">
+                <div class="card" id="one-day">
+                    <p class="date" id="one-day-date"></p>
+                    <p id="one-day-temp"></p>
+                    <p id="one-day-wind"></p>
+                    <p id="one-day-humidity"></p>
+                </div>
+                <div class="card" id="two-day">
+                    <p class="date" id="two-day-date"></p>
+                    <p id="two-day-temp"></p>
+                    <p id="two-day-wind"></p>
+                    <p id="two-day-humidity"></p>
+                </div>
+                <div class="card" id="three-day">
+                    <p class="date" id="three-day-date"></p>
+                    <p id="three-day-temp"></p>
+                    <p id="three-day-wind"></p>
+                    <p id="three-day-humidity"></p>
+                </div>
+                <div class="card" id="four-day">
+                    <p class="date" id="four-day-date"></p>
+                    <p id="four-day-temp"></p>
+                    <p id="four-day-wind"></p>
+                    <p id="four-day-humidity"></p>
+                </div>
+                <div class="card" id="five-day">
+                    <p class="date" id="five-day-date"></p>
+                    <p id="five-day-temp"></p>
+                    <p id="five-day-wind"></p>
+                    <p id="five-day-humidity"></p>
+                </div>
+            </div>
+        </section>
     </div>
-    <div class="saved-cities">
-        Saved Cities
-    </div>
-    <div class="container" id="current-city">
-        <h3 id="current-city-name">Current City Name</h3>
-        <h2 id="currentDay"></h2>
-    </div>
-    <!-- <div id="5-day-forecast">5-day-forecast
-
-    </div> -->
 
 
     <script src="script.js"></script>
