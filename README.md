@@ -4,7 +4,7 @@ With the Weather Dashboard, users can easily search for the weather in their cit
 
 The Weather Dashboard will save user's search history and display previously searched cities below the searchbr. To check the weather in a previously searched city, simply click the button with the city name. 
 
-URL of application:
+URL of application: https://amadeamargo.github.io/weather-api-dashboard/
 
 Screenshot of application:
 
